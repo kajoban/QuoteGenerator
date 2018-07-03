@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+    <h1 id="header">Quote Generator</h1>
+
+    <p id="para">
+        "<%= data["quote"] %>"
+            <br> -
+            <%= data["author"] %>
+    </p>
+
+    <form action="/quotes" method="GET">
+        <button type="submit" class="btn btn-link btn-lg" id="button">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+    </form>
+
+<% include partials/footer %>
