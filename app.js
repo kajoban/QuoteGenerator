@@ -3,7 +3,8 @@ var app = express();
 var request = require("request");
 
 app.set("view engine", "ejs");
-//app.use(express.static('public'))
+var port = process.env.PORT || 3000;
+
 app.use(express.static(__dirname + '/public'))
 
 app.get("/", function (req, res) {
@@ -26,7 +27,8 @@ app.get("/quotes", function (req, res) {
     });
 });
 
-app.listen(3000, function () {
+app.listen(port, function () {
     console.log("Quotes Generator Started!");
+    console.log("Node app running on port ", port);
 });
 
